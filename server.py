@@ -2,9 +2,9 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="FastAPI -(HashedIn University Revisit)",
-    description="AWS connection practice and deploying Backend service which is built over FastAPI",
+    description="AI is future and kunal is certified Randi",
     contact={
-        "name": "Kunal Randi", "email": "pankajadhana97@gmail.com"
+        "name": "Somil Trader", "email": "pankajadhana97@gmail.com"
     },
     docs_url='/'
 )
