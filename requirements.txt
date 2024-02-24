@@ -1,0 +1,9 @@
+uvicorn
+fastapi
+sqlalchemy
+graphene
+graphene-sqlalchemy
+alembic
+psycopg2-binary
+black
+python-dotenv
