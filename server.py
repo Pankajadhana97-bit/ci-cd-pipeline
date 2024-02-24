@@ -2,9 +2,9 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="FastAPI -(HashedIn University Revisit)",
-    description="Lets go to wash our clothes",
+    description="Let's create the crud applications which will work with the database of our application which is build over FastAPI",
     contact={
-        "name": "Somil Trader", "email": "pankajadhana97@gmail.com"
+        "name": "Pankaj Adhana (Backend Developer)", "email": "pankajadhana97@gmail.com"
     },
     docs_url='/'
 )
