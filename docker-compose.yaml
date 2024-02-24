@@ -7,15 +7,3 @@ services:
       - 9000:80
     volumes:
       - .:/app
-    depends_on:
-      - db
-  db:
-    container_name: postgresql-db-container
-    image: postgres
-    restart: always
-    ports:
-      - 5432:5432
-    environment:
-     -  POSTGRES_USER=${DB_USER}
-     -  POSTGRES_PASSWORD=${DB_PASSWORD}
-     -  POSTGRES_DB=${DB_NAME}
