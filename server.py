@@ -3,8 +3,7 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="FastAPI -(HashedIn University Revisit)",
-    description="Performing the crud operations over the database and making it robust to handle the wide variety of "
-                "the user load",
+    description="AWS connection practice and deploying Backend service which is built over FastAPI",
     contact={
         "name": "Pankaj Adhana", "email": "pankajadhana97@gmail.com"
     },
