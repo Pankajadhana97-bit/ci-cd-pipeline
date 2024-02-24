@@ -4,7 +4,7 @@ app = FastAPI(
     title="FastAPI -(HashedIn University Revisit)",
     description="AWS connection practice and deploying Backend service which is built over FastAPI",
     contact={
-        "name": "Pankaj Adhana", "email": "pankajadhana97@gmail.com"
+        "name": "Kunal Randi", "email": "pankajadhana97@gmail.com"
     },
     docs_url='/'
 )
