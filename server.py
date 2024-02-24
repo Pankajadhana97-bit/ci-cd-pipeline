@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="FastAPI -(HashedIn University Revisit)",
-    description="AI is future and kunal is certified Randi",
+    description="Lets go to wash our clothes",
     contact={
         "name": "Somil Trader", "email": "pankajadhana97@gmail.com"
     },
