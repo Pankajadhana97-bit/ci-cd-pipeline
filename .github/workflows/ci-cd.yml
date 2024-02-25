@@ -1,0 +1,37 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: pankajadhana97/cicd-pipeline:latest
+
+  deploy:
+    runs-on: self-hosted
+    needs: build
+
+    steps:
+      - name: Pull Docker Image
+        run: sudo docker pull pankajadhana97/cicd-pipeline:latest
+      - name: Delete Old Docker Container
+        run: sudo docker rm -f cicd-pipeline-container || true
+      - name: Run Docker Container
+        run: sudo docker run -d -p 8080:80 --name cicd-pipeline-container pankajadhana97/cicd-pipeline
