@@ -11,11 +11,11 @@ app = FastAPI(
 )
 
 
-@app.get("/api/root")
+@app.get("/hello-world")
 async def root():
     return {"message": "Hello World from the amazon web services using dockerhub"}
 
 
-@app.get("/api/hello/{name}")
+@app.get("/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello world {name}  "}
