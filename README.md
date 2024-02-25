@@ -1,2 +1,2 @@
-# ci-cd-pipeline
+# CI-CD-pipeline
 CI - CD pipeline practice over aws
