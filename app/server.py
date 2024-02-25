@@ -4,7 +4,7 @@ app = FastAPI(
     title="FastAPI -(Crud Application with JWT support)",
     description="applying the concepts which we learnt in space of FastAPI",
     contact={
-        "name": "Pankaj Adhana (Backend Developer)",
+        "name": "Contact Developer (Pankaj Adhana)",
         "email": "pankajadhana97@gmail.com"
     },
     docs_url='/',
