@@ -22,3 +22,11 @@ async def health():
         raise e
     
 
+@app.get('/hello-world',tags=['Health'])
+async def hello_world():
+    try:
+        return {
+            'message' : "Hello world"
+        }
+    except Exception as e:
+        raise e
