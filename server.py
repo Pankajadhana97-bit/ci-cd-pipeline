@@ -1,21 +1,24 @@
 from fastapi import FastAPI
 
 app = FastAPI(
-    title="FastAPI-(HashedIn University Revisit)",
-    description="Let's create the crud applications which will work with the database of our application which is build over FastAPI",
+    title="FastAPI -(Crud Application with JWT support)",
+    description="applying the concepts which we learnt in space of FastAPI",
     contact={
         "name": "Pankaj Adhana (Backend Developer)",
         "email": "pankajadhana97@gmail.com"
     },
-    docs_url='/'
+    docs_url='/',
+    version="1.0.0"
 )
 
 
-@app.get("/hello-world")
-async def root():
-    return {"message": "Hello World from the amazon web services using dockerhub"}
+@app.get('/health', tags=['Health'])
+async def health():
+    try:
+        return {
+            "message" : "your application is working fine"
+        }
+    except Exception as e:
+        raise e
+    
 
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello world {name}  "}
