@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .views import users,services,portfolio,company,contactus
+from .views import users, services, portfolio, company, contactus
 
 app = FastAPI(
     title="kspinfotech - (Backend necessary endpoints to develop FE)",
@@ -23,8 +23,7 @@ app.include_router(contactus.router)
 async def root():
     try:
         return {
-            "message" : "your application is working fine"
+            "message": "your application is working fine"
         }
     except Exception as e:
         raise e
-    
